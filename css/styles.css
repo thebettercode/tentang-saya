@@ -11153,3 +11153,20 @@ a.email {
   border-color: var(--bs-primary) !important;
 }
 
+#portfolio-gallery img {
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.card {
+    position: relative;
+}
+
+.card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: transparent;
+    pointer-events: auto;
+}
