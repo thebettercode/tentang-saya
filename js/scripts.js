@@ -48,3 +48,17 @@ for (i = 0; i < coll.length; i++) {
   });
 }
 
+// Ambil semua tombol filter
+    const buttons = document.querySelectorAll('.filter-buttons .btn');
+
+    buttons.forEach(btn => {
+        btn.addEventListener('click', function () {
+            // Hapus class active dari semua tombol
+            buttons.forEach(b => b.classList.remove('active'));
+
+            // Tambahkan active hanya ke tombol yang diklik
+            this.classList.add('active');
+        });
+    });
+
+
