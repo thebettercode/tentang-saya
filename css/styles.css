@@ -351,6 +351,11 @@ button {
   width: 10px;
   
 }
+#portfolio button {
+        border-radius: 20px;
+        padding: 6px 18px;
+        font-weight: 500;
+    }
 
 button:focus:not(:focus-visible) {
   outline: 0;
