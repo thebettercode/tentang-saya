@@ -243,14 +243,70 @@
                 </div>
             </section>
             <hr class="m-0" />
-            <!-- Portfolio-->
+    <!-- Start Portfolio-->
         <section class="resume-section" id="portfolio">
-            <div class="resume-section-content">
-                <h2 class="mb-5">Portfolio</h2>
-                <p>Here is my work</p>
-                <p class="mb-0">Tableau</p>
+    <div class="resume-section-content">
+        <h2 class="mb-5">Portfolio</h2>
+        <p>Here is my work</p>
+        <p class="mb-4">Tableau</p>
+
+        <!-- Filter Buttons -->
+        <div class="d-flex flex-wrap gap-2 mb-4">
+            <button class="btn btn-outline-primary mixitup-control-active" data-filter="all">All</button>
+            <button class="btn btn-outline-primary" data-filter=".beautiful">Beautiful</button>
+            <button class="btn btn-outline-primary" data-filter=".creative">Creative</button>
+            <button class="btn btn-outline-primary" data-filter=".cool">Cool</button>
+            <button class="btn btn-outline-primary" data-filter=".awesome">Awesome</button>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="row g-3" id="portfolio-gallery">
+
+            <!-- Image 1 -->
+            <div class="col-md-4 mix beautiful">
+                <div class="card border-0 shadow-sm">
+                    <img src="https://picsum.photos/id/1011/600/400" class="card-img-top" alt="">
+                </div>
+            </div>
+
+            <!-- Image 2 -->
+            <div class="col-md-4 mix creative">
+                <div class="card border-0 shadow-sm">
+                    <img src="https://picsum.photos/id/1015/600/400" class="card-img-top" alt="">
+                </div>
+            </div>
+
+            <!-- Image 3 -->
+            <div class="col-md-4 mix cool">
+                <div class="card border-0 shadow-sm">
+                    <img src="https://picsum.photos/id/1021/600/400" class="card-img-top" alt="">
+                </div>
+            </div>
+
+            <!-- Image 4 -->
+            <div class="col-md-4 mix awesome">
+                <div class="card border-0 shadow-sm">
+                    <img src="https://picsum.photos/id/1025/600/400" class="card-img-top" alt="">
+                </div>
+            </div>
+
+            <!-- Image 5 -->
+            <div class="col-md-4 mix beautiful cool">
+                <div class="card border-0 shadow-sm">
+                    <img src="https://picsum.photos/id/1035/600/400" class="card-img-top" alt="">
+                </div>
+            </div>
+
+            <!-- Image 6 -->
+            <div class="col-md-4 mix creative awesome">
+                <div class="card border-0 shadow-sm">
+                    <img src="https://picsum.photos/id/1041/600/400" class="card-img-top" alt="">
+                </div>
+                </div>
+            </div>
             </div>
         </section>
+        <!-- End Portfolio-->
             
             <!-- Awards-->
             <section class="resume-section" id="awards">
@@ -323,5 +379,10 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        <!-- MixItUp JS (Filter) -->
+        <script src="https://cdn.jsdelivr.net/npm/mixitup@3/dist/mixitup.min.js"></script>
+        <script>
+        var mixer = mixitup('#portfolio-gallery');
+        </script>
     </body>
 </html>
