@@ -341,40 +341,7 @@ th {
 label {
   display: inline-block;
 }
-/* RESET STYLING BUTTON AGAR NORMAL */
-    #portfolio .btn {
-        all: unset;                 /* Reset semua style bawaan theme */
-        display: inline-block;
-        padding: 6px 16px;
-        border: 1px solid #0d6efd;
-        border-radius: 20px;
-        cursor: pointer;
-        color: #0d6efd;
-        font-size: 16px;
-        font-family: inherit;
-        text-decoration: none;
-        background-color: white;
-        line-height: 1;
-    }
 
-    #portfolio .btn:hover {
-        background-color: #0d6efd;
-        color: white;
-    }
-
-    #portfolio .btn.active,
-    #portfolio .mixitup-control-active {
-        background-color: #0d6efd !important;
-        color: white !important;
-    }
-
-    /* WRAPPER SUPAYA TIDAK MENUMPUK */
-    #portfolio .filter-buttons {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        margin-bottom: 20px;
-    }
 button {
   border-radius: 0;
   text-align: center;
@@ -11143,5 +11110,46 @@ a.email {
   0% { background-position: 0 0; }
   50% { background-position: 400% 0; }
   100% { background-position: 0 0; }
+}
+/* selector filter */
+#portfolio .filter-buttons {
+  display: flex;            /* baris horizontal */
+  flex-wrap: wrap;          /* pindah baris bila perlu */
+  gap: 10px;                /* jarak antar tombol */
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* selector lebih spesifik supaya menang atas `button { ... }` global */
+#portfolio .filter-buttons .btn,
+#portfolio .filter-buttons button {
+  all: unset;               /* reset styling agar bersih */
+  display: inline-block;
+  width: auto !important;   /* override width:10px global */
+  margin: 0 !important;     /* override margin global */
+  padding: 6px 16px !important;
+  border: 1px solid var(--bs-primary) !important; /* pakai warna tema */
+  border-radius: 20px !important;
+  background-color: #fff !important;
+  color: var(--bs-primary) !important;
+  font-size: 16px;
+  cursor: pointer;
+  line-height: 1;
+  text-align: center;
+}
+
+/* hover / active */
+#portfolio .filter-buttons .btn:hover,
+#portfolio .filter-buttons button:hover {
+  background-color: var(--bs-primary) !important;
+  color: #fff !important;
+}
+
+#portfolio .filter-buttons .btn.active,
+#portfolio .filter-buttons .mixitup-control-active,
+#portfolio .filter-buttons button.active {
+  background-color: var(--bs-primary) !important;
+  color: #fff !important;
+  border-color: var(--bs-primary) !important;
 }
 
